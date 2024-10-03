@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import ProtectedRoute from './components/protectedRoute';
 import Dashboard from './components/dashboard';
-import LoginForm from './Components/loginForm';
+import LoginForm from './components/loginForm';
 
 function App() {
   return (
