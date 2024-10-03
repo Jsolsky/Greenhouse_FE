@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoutButton from './logoutButton';
+import LogoutButton from '../components/logoutButton';
 
 function Dashboard() {
   return (

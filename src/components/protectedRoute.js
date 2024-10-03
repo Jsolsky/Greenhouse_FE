@@ -10,7 +10,10 @@ function ProtectedRoute({ children }) {
 
   return (
     <div>
-        {children}
+        INSERT NAVBAR
+        {children} 
+        <br/>
+        INSERT FOOTER
     </div>
   )
 }
