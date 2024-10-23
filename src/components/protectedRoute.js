@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import Navbar from "./navbar.js";
 
 function ProtectedRoute({ children }) {
   const token = localStorage.getItem('token');
@@ -10,7 +11,7 @@ function ProtectedRoute({ children }) {
 
   return (
     <div>
-        INSERT NAVBAR
+        <Navbar />
         {children} 
         <br/>
         INSERT FOOTER
