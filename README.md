@@ -6,13 +6,25 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run start:dev`
 
-Runs the app in the development mode.\
+Runs the app in the development mode with a local server URL.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+NOTE: the server also needs to be running locally for this to work. https://github.com/Jsolsky/Greenhouse_BE/commits/main/
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+Create a new file `.env.dev` and insert the api URL:
+`REACT_APP_API_URL=http://localhost:3500`
+
+### `npm run start:prod`
+
+Runs the app in the production mode with an API url connected to the live server, this is intended for deployment only.
+
+Create a new file `.env.prod` and insert the api URL:
+`REACT_APP_API_URL=https://greenhouse-be-m9d5.onrender.com`
 
 ### `npm test`
 
