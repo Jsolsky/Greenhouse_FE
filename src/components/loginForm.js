@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 function LoginForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -10,7 +12,9 @@ function LoginForm() {
     e.preventDefault();
     
     // Send credentials to the back-end
-    const response = await fetch('https://greenhouse-be-m9d5.onrender.com/auth', {
+    const API_URL = process.env.REACT_APP_API_URL;
+    
+    const response = await fetch(`${API_URL}/auth`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
