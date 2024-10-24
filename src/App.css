@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #a2d9af;
+  padding: 20px;
+  border-radius: 0 0 18px 18px;
+}
+ 
+.nav-links {
+  display: block;
+}
+ 
+.nav-button {
+  background-color: #6fbf73;
+  color: white;
+  border: none;
+  height: 40px;
+  margin-left: 30px;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 100px
+}
+ 
+.nav-button:focus {
+  background-color: #D9D9D9;
+  color: black;
+}
