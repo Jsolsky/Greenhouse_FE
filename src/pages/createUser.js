@@ -1,5 +1,5 @@
 import React from 'react';
-import CreateUserForm from '../components/createUserForm';
+import CreateUserForm from '../components/auth/createUserForm';
 import { useNavigate } from 'react-router-dom';
 
 function CreateUser() {

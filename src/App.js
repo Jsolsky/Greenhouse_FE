@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import ProtectedRoute from './components/protectedRoute';
+import ProtectedRoute from './components/common/protectedRoute';
 import Dashboard from './pages/dashboard';
 import Data from './pages/datapage';
 import Login from './pages/login';
