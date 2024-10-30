@@ -1,4 +1,5 @@
 import React from "react";
+import Chart from './chart';
 
 function DataOverview({ selectedPlant, selectedTimeframe }) {
     return (
@@ -7,7 +8,7 @@ function DataOverview({ selectedPlant, selectedTimeframe }) {
         <p>Timeframe: {selectedTimeframe}</p>
         {/* Chart Component Placeholder */}
         <div className="chart">
-          <p>Temperature Chart will be displayed here.</p>
+          <Chart/>
         </div>
       </div>
     );
