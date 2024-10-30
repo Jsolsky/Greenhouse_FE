@@ -8,7 +8,7 @@ function DataSidebar({ greenHouseList, selectedGreenHouse, onGreenHouseChange, s
         <label>
           Plant:
           <select defaultValue="" onChange={onGreenHouseChange}>
-            <option disabled>
+            <option value="" disabled>
               Select an option...
             </option>
             {greenHouseList.map((item, index) => {

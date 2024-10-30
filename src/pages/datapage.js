@@ -21,6 +21,9 @@ function Datapage() {
   const fetchTimeData = async () => {
     try {
       setLoading(true);
+      if (!queryParams.get('filter')) {
+        return
+      }
       const response = await fetch(`${API_URL}/enviromentData/boxData?boxId=${queryParams.get('filter')}`); // Replace with your API endpoint
       if (!response.ok) {
         throw new Error('Error getting boxes');
