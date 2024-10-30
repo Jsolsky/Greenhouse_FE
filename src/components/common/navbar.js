@@ -1,5 +1,6 @@
 import React from "react";
 import '../../App.css';
+import logo from '../../Logo.png'
 import { useNavigate } from "react-router-dom";
 
 function Navbar() {
@@ -28,7 +29,7 @@ function Navbar() {
     return (
       <div className="navbar">
         <div className="logo">
-          <img src="Logo.png" alt="Logo" width="50px"/>
+          <img src={logo} alt="Logo" width="50px"/>
         </div>
         <div className="nav-links">
           <button className="nav-footer-button" onClick={navigateDashboard}>Overview</button>
