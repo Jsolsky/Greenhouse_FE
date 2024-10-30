@@ -25,46 +25,48 @@ ChartJS.register(
   Legend
 );
 
-const ChartComponent = () => {
-  const chartData = {
-    labels: [
-      "2024-10-24T01:09:45.000Z", "2024-10-24T01:09:56.000Z", "2024-10-24T01:10:07.000Z",
-      "2024-10-24T01:10:19.000Z", "2024-10-24T01:10:30.000Z", "2024-10-24T01:10:42.000Z",
-      "2024-10-24T01:10:53.000Z", "2024-10-24T01:11:04.000Z", "2024-10-24T01:11:15.000Z",
-      "2024-10-24T01:11:27.000Z"
-    ],
-    datasets: [
-      {
-        label: 'Temperature',
-        data: [
-          114, 864, 52, 870, 386, 1023, 349, 767, 550, 389
-        ],
-        fill: false,
-        backgroundColor: '#6fbf73',
-        borderColor: '#6fbf73',
-      },
-    ],
-  };
+const Chart = ({loading , timeData}) => {
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+  
+  if (!timeData) {
+    return <p>No Data</p>;
+  } 
+  else {
+    console.log('DATA DATA');
+    const chartData = {
+      labels: timeData.map((item) => item.time),
+      datasets: [
+        {
+          label: 'Temperature',
+          data: timeData.map((item) => item.temperature),
+          backgroundColor: '#6fbf73',
+          borderColor: '#6fbf73',
+        },
+      ],
+    };
 
-  return (
-    <div>
-      <div style={{ width: '800px', height: '300px' }}>
-        <Line
-          data={chartData}
-          options={{
-            scales: {
-              x: {
-                type: 'time',
-                time: {
-                  unit: 'minute',
+    return (
+      <div>
+        <div style={{ width: '800px', height: '300px' }}>
+          <Line
+            data={chartData}
+            options={{
+              scales: {
+                x: {
+                  type: 'time',
+                  time: {
+                    unit: 'minute',
+                  },
                 },
               },
-            },
-          }}
-        />
+            }}
+          />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
-export default ChartComponent;
+export default Chart;

@@ -1,15 +1,19 @@
 import React from "react";
+import { useState } from "react";
 
-function DataSidebar({ selectedPlant, onPlantChange, selectedTimeframe, onTimeframeChange }) {
-    return (
+function DataSidebar({ greenHouseList, selectedGreenHouse, onGreenHouseChange, selectedTimeframe, onTimeframeChange }) {    
+  return (
       <div className="Datasidebar">
-        <h3>{selectedPlant}</h3>
+        <h3>BoxId: {selectedGreenHouse}</h3>
         <label>
           Plant:
-          <select value={selectedPlant} onChange={onPlantChange}>
-            <option value="Thyme">Thyme</option>
-            <option value="Mint">Mint</option>
-            <option value="Basil">Basil</option>
+          <select defaultValue="" onChange={onGreenHouseChange}>
+            <option disabled>
+              Select an option...
+            </option>
+            {greenHouseList.map((item, index) => {
+              return <option key={index} value={item["boxId"]}>{item["boxName"]}</option>
+            })}
           </select>
         </label>
   
